@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+/* defining global css
+By using :root, you can set up variables that can be reused  */
+:root{
+    --text-color:#f5f4f5;
+    --hover-color:#12f7ff;
+    --bg-color:#250821;
+    --secon-bg-color:#292e33;
+    --big-font:2.5rem;
+    --norma-font:2rem;
+    --neon-box-shadow:0 0 .5rem #12f7ff;
+    --h2-font:3rem;
+    --font-neon-text-shadow:0 0 10 rgba(18,247,255,0.3),    /* creating a multi-layered text shadow effect, mimicking a neon glow. 0 0 10 rgba(18,247,255,0.3): This line sets a text shadow with no horizontal or vertical offset (0 0), a blur radius of 10, and a color defined as rgba(18,247,255,0.3) (a light blue with some transparency).*/
+    0 0 20 rgba(18,247,255,0.3),
+    0 0 30 rgba(18,247,255,0.3),
+    0 0 40 rgba(18,247,255,0.3),
+    0 0 70 rgba(18,247,255,0.3),
+    0 0 80 rgba(18,247,255,0.3),
+    0 0 100 rgba(18,247,255,0.3),
+    0 0 150 rgba(18,247,255,0.3),
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);  
+}
+
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 10px;
+}
+
+
+.logo{
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+span{
+    color: var(--hover-color);
+}
+
+.navlist{
+    display: flex;
+}
+
+.navlist a{
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 10px 20px;
+}
+
+
+.navlist a:hover {
+    color: var(--hover-color); /* Sets the text color to the value of the --hover-color variable */
+    text-shadow:0 0 5px rgba(18,247,255,0.6),
+    0 0 15px rgba(18,247,255,0.6),
+    0 0 25px rgba(18,247,255,0.6),
+    0 0 40px rgba(18,247,255,0.6); 
+}
+
+#menu-icon{
+    font-size: 1.8rem;
+    z-index: 10001;
+    cursor: pointer;
+    margin-left: 25px;
+    background: var(--hover-color);
+    border-radius: 3px;
+    color: var(--secon-bg-color);
+    display: none;
+}
+
+
+section{
+    padding: 25px 10%;
+}
+
+.home{
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    grid-gap:4em;
+}
+
+.home-content{
+    max-width: 600px;
+}
+
+.home-content h1{
+    font-size: var(--big-font);
+    font-weight: 700;
+}
+
+.change-text{
+   font-size: 1.5rem;
+   font-weight: 600; 
+}
+
+.change-text h3{
+    display: inline-flex;
+    margin: 0;
+    vertical-align: top;
+}
+
+.change-text h3 .word{
+    position: absolute;
+    display: flex;
+    opacity:  0;
+}
+
+.img-box{
+    width: 600px;
+}
+.img-box img{
+    width:100%;
+    padding: 0%;
+}
+
