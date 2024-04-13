@@ -183,7 +183,7 @@ section{
 }
 
 
-.btn-box a.btn{
+.btn-box .btn{
     display:inline-flex;
     justify-content: center;
     align-items: center;
@@ -204,11 +204,11 @@ section{
     border-radius: 10px;
 }
 
-a.btn:hover{
+.btn:hover{
     color: var(--hover-color);
 }
 
-a.btn::before{
+.btn::before{
     content: "";
     position: absolute;
     top: 0;
@@ -222,21 +222,21 @@ a.btn::before{
 
 
 
-a.btn:hover::before{
+.btn:hover::before{
     width: 100%;
 }
 
 
-a.btn:nth-child(2){
+.btn:nth-child(2){
     background: var(--bg-color);
     color: var(--hover-color);
 }
 
-a.btn:nth-child(2):hover{
+.btn:nth-child(2):hover{
     color: var(--bg-color);
 }
 
-a.btn:nth-child(2)::before{
+.btn:nth-child(2)::before{
     background: var(--hover-color);
 }
 
@@ -316,3 +316,260 @@ a.btn:nth-child(2)::before{
 .liquid-shape:nth-child(2){
     filter: blur(50px);
 }
+
+
+
+/* Skills section CSS */
+
+.main-text{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--hover-color);
+}
+
+.main-text h2{
+    font-weight: 700;
+    font-size: var(--norma-font);
+}
+
+ .main-text span{
+    color: #fdfdfd;
+    font-size: .8rem;
+    font-weight: 200;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+ }
+
+.skills{
+    background: var(--secon-bg-color);
+}
+
+.skill-main{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2,1fr);
+    grid-row-gap: 30px;
+    grid-column-gap: 50px;
+
+}
+
+.skill-bar{
+    margin-bottom: 2.3rem;
+}
+
+.skill-main h3{
+    margin-bottom: 2rem;
+    font-size: var(--norma-font);
+    text-align: center;
+}
+
+.skill-left .skill-bar .info{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.skill-left .skill-bar .bar{
+    width: 100%;
+    height: 10px;
+    background-color: var(--bg-color);
+    border-radius: 25px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.skill-bar .bar span{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    background: var(--hover-color);
+    border-radius: 25px;
+    box-shadow: var(--neon-box-shadow);
+}
+
+
+.skill-bar .bar .cpp{
+   width: 90%; 
+   animation: cpp 2s;
+}
+
+.skill-bar .bar .html{
+    width: 80%; 
+    animation: html 3s;
+}
+
+.skill-bar .bar .css{
+    width: 75%; 
+    animation: css 4s;
+}
+
+.skill-bar .bar .js{
+    width: 72%; 
+    animation: js 5s;
+}
+ 
+
+.skill-bar .bar .python{
+    width: 70%; 
+    animation: python 6s;
+}
+
+
+.professional{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.box{
+    position: relative;
+    margin: 10px 0;
+    flex: 1 1 15rem;
+}
+
+.circle{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.box .text{
+    text-align: center;
+    color: #fff;
+    font-size: 1rem;
+
+}
+
+.box .text big{
+    font: 400;
+    letter-spacing: 1px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box .text small{
+    display: block;
+    font-weight: 600;
+}
+
+.circle .points{
+    width: 2px;
+    height: 10px;
+    background-color: var(--bg-color);
+    position: absolute;
+    border-radius: 3px;
+    transform: rotate(calc(var(--i)*var(--rot))) translateY(-45px);
+
+}
+
+.points.marked{
+    animation: glow 0.04s linear forwards;
+    animation-delay: calc(var(--i)*0.05s);
+}
+
+.contact{
+    background: var(--secon-bg-color);
+    width: 100%;
+}
+
+.contact form{
+    text-align: center;
+    max-width: 50rem;
+    margin: 1rem auto;
+    margin-bottom: 3rem;
+}
+
+.contact form input, .contact form textarea{
+    width: 100%;
+    color: var(--text-color);
+    background: var(--bg-color);
+    margin-bottom: .8rem;
+    border: none;
+    border-radius: 5px;
+    padding: .7rem;
+}
+.contact form textarea{
+    resize: none;
+}
+
+.formBtn{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.formBtn .btn{
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+
+
+
+
+
+@keyframes cpp{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width:90%;
+    }
+}
+
+@keyframes html{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width:80%;
+    }
+}
+
+@keyframes css{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width:75%;
+    }
+}
+
+@keyframes js{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width:72%;
+    }
+}
+
+@keyframes python{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width:70%;
+    }
+}
+
+
+@keyframes glow{
+    0%{
+        background: var(--bg-color);
+        box-shadow: none;
+    }
+    100%{
+        background: var(--hover-color);
+        box-shadow: var(--neon-box-shadow);
+    }
+}
+
