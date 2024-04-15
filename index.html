@@ -15,8 +15,6 @@
         <div class="logo"><span>A</span>man.</div>
         <ul class="navlist">
             <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -250,6 +248,87 @@
     </section>
 
 
+    <!-- Portfolio section -->
+    <section id="portfolio" class="portfolio">
+        <div class="main-text">
+            <span>My Work uptil Now</span>
+            <h2>Latest Project</h2>
+        </div>
+
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="btn" data-filter="all">All</button>
+                <button class="btn" data-filter=".programming">Programming</button>
+                <button class="btn" data-filter=".interacting">Interacting</button>
+                <button class="btn" data-filter=".networking">Networking</button>
+            </div>
+
+            <div class="portfolio-gallery">
+                <div class="port-box mix programming">
+                    <div class="port-image">
+                        <img src="port1.PNG" alt="">
+                    </div>
+                    <div class="port-content">
+                        <h3>Student Management System</h3>
+                        <p>
+                            Credentials according to his/her role; Admin, Teacher and Student.
+                            Used: C#, Oracle Database and Microsoft Visual Studio.
+                        </p>
+                    
+                    </div>
+                </div>
+
+                <div class="port-box mix networking">
+                    <div class="port-image">
+                    <img src="port3.PNG" alt="">
+                    </div>
+                    <div class="port-content">
+                        <h3>Inter-Cities Networking</h3>
+                        <p>
+                            A Networking project which involved developing a network for the inter-cities communication.
+                            Used: Cisco Packet Tracer
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="port-box mix programming">
+                    <div class="port-image">
+                    <img src="port2.PNG" alt="">
+                    </div>
+                    <div class="port-content">
+                        <h3>Text Editor</h3>
+                        <p>
+                            A Console-Based text editor comprising of modules such as creating, loading and updating a text file, generating suggestions and encoding and decoding.
+                            Used: C++ and Microsoft Visual Studio.
+                        </p>
+        
+                    </div>
+                </div>
+                
+                <div class="port-box mix interacting">
+                    <div class="port-image">
+                    <img src="port4.PNG" alt="">
+                    </div>
+                    <div class="port-content">
+                        <h3>Console-Based Candy Crush Game</h3>
+                        <p>
+                            A Console-Based Candy Crush Game which comprises of almost all functionalities relating to the candy movements as in the actual game.
+                            Used: C++ and Microsoft Visual Studio.
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+
+        
+
+
+
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="main-text">
@@ -273,10 +352,12 @@
 
     <!-- Website footer -->
     <footer>
-        
+        <p>Let's work together!</p>
+        <p>&copy; Aman Shahzad, 2024</p>
+        <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
     </footer>
 
-
+    <script src="mixitup.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
