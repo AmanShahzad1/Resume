@@ -76,13 +76,48 @@ var mixer = mixitup('.portfolio-gallery');
 let menuLi = document.querySelectorAll('header ul li a');
 let section = document.querySelectorAll('section');
 
-function activeMenu(){
-    let len = section.length;
-    while(--len && window.scrollY + 97 < section[len].offsetTop){
-        menuLi.forEach(sec => sec.classList.remove("active"));
-        menuLi[len].classList.add("active");
-    }
+function setActiveMenu() {
+    let scrollPosition = window.scrollY + 97; // Adding a buffer to the scroll position
+
+    section.forEach((sec, index) => {
+        if (scrollPosition >= sec.offsetTop && (index === section.length - 1 || scrollPosition < section[index + 1].offsetTop)) {
+            // If the scroll position is within the current section
+            menuLi.forEach(item => item.classList.remove("active")); // Remove active class from all menu items
+            menuLi[index].classList.add("active"); // Add active class to the corresponding menu item
+        }
+    });
 }
 
-activeMenu();
-window.addEventListener("scroll", activeMenu);
+// Call setActiveMenu initially to set the initial state of the navigation menu
+setActiveMenu();
+
+// Add an event listener to the window scroll event
+window.addEventListener("scroll", setActiveMenu);
+
+
+
+
+
+// Sticky Navbar
+const header = document.querySelector("header");
+window.addEventListener("scroll", function(){
+    header.classList.toggle("sticky", window.scrollY > 50);
+})
+
+
+
+
+// Toggle icon navbar
+
+let menuIcon = document.querySelector("#menu-icon");
+let navlist = document.querySelector(".navlist");
+
+menuIcon.onclick = ()=>{
+    menuIcon.classList.toggle("bx-x");
+    navlist.classList.toggle("open");
+}
+
+window.onscroll = ()=>{
+    menuIcon.classList.remove("bx-x");
+    navlist.classList.remove("open");
+}
