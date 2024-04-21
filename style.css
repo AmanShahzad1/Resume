@@ -614,7 +614,7 @@ section{
     transition: 0.5s;
     padding: 0.2rem;
 }
-
+ 
 .port-box:hover .port-content{
     opacity: 1;
 }
@@ -624,16 +624,30 @@ section{
 }
 
 .port-content h3{
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 1.1rem;
+    font-weight: 800;
 }
 .port-content p{
-    font-size: .8rem;
+    font-size: .7rem;
     margin: 5px 0 15px 0;
 }
 
+.port-content a{
+    background: #fff;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 25px;
+    border: 1px solid var(--hover-color);
+    outline: 2px solid #fff;
+}
 
-
+.port-content a{
+    font-size: 1.3rem;
+    color: var(--secon-bg-color);
+} 
 /* footer css */
 footer{
     padding: 1.5rem 10%;
