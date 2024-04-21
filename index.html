@@ -335,11 +335,13 @@
             <h2>Contact Me</h2>
         </div>
 
-        <form action="#">
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Your Email">
-            <input type="number" placeholder="Phone Number">
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+        <form action="https://api.web3forms.com/submit" method="POST">
+
+            <input type="hidden" name="access_key" value="eb7841e8-a4b9-4337-8d4d-35f20be462c9">
+            <input type="text" id="visitor_name" name="visitor_name" placeholder="Your Name">
+            <input type="email" id="visitor_email" name="visitor_email" placeholder="Your Email">
+            <input type="number" id="visitor_phone" name="visitor_phone" placeholder="Phone Number">
+            <textarea name="visitor_msg" id="visitor_msg" cols="30" rows="10" placeholder="Your Message"></textarea>
             <div class="btn-box formBtn">
                 <button type="submit" class="btn">Send Message </button>
             </div>
@@ -358,6 +360,7 @@
     </footer>
 
     <script src="mixitup.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
