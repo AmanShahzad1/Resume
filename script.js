@@ -54,10 +54,10 @@ circles.forEach(elem=>{
     var rotate = 360/dots;
 
     for(let  i = 0; i < dots; i++){
-        points += `<div class="points" style="--i:${i}; --rot:${rotate}deg"></div>`;
+        points += `<div class="points" style="--i:${i}; --rot:${rotate}deg"></div>`;        // <div class="points" style="--i:0; --rot:72deg"></div>
     }
 
-    elem.innerHTML = points;
+    elem.innerHTML = points;     
 
     const pointsMarked = elem.querySelectorAll('.points');
     for(let i = 0; i < percent; i++){
@@ -66,7 +66,7 @@ circles.forEach(elem=>{
 })
 
 
-//Portfolio mix it up
+//Project mix it up
 var mixer = mixitup('.portfolio-gallery');
 
 
