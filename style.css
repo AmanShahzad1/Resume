@@ -408,22 +408,26 @@ section {
 }
 
 .skill-bar .bar .html {
-  width: 80%;
+  width: 95%;
   animation: html 3s;
 }
 
 .skill-bar .bar .css {
-  width: 75%;
+  width: 90%;
+  animation: css 4s;
+}
+.skill-bar .bar .node {
+  width: 88%;
   animation: css 4s;
 }
 
 .skill-bar .bar .js {
-  width: 72%;
+  width: 92%;
   animation: js 5s;
 }
 
 .skill-bar .bar .python {
-  width: 70%;
+  width: 75%;
   animation: python 6s;
 }
 
